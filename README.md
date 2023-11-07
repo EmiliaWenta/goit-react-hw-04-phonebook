@@ -25,7 +25,6 @@
   - It is impossible to add an existing contact, an appropriate message will be
     displayed.
   - You can filter your contacts.
-  - If You return to the website later, your saved contacts will be shown.
 
 ## Technologies Used
 
@@ -38,6 +37,9 @@ Project is created with:
 - CSS
 
 ## Screenshots
+
+![image](https://github.com/EmiliaWenta/goit-react-hw-04-phonebook/assets/126571469/6be9eb55-616a-49ab-a89c-396f9db00719)
+
 
 ## Setup
 
