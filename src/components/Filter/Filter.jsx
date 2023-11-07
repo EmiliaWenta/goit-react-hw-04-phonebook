@@ -1,23 +1,19 @@
 import React from 'react';
 import css from './Filter.module.css';
-import PropTypes from 'prop-types';
+import { usePhoneBook } from 'hooks/PhoneBookContext';
 
-const Filter = ({ filter, onChange }) => {
+export default function Filter() {
+  const { filter, changeSubmit } = usePhoneBook();
   return (
     <div className={css.filter}>
-      <p>Find contacts by name</p>
+      <p className={css.filter__title}>Find contacts by name</p>
       <input
         className={css.filter__input}
         type="text"
         name="nametofilter"
         value={filter}
-        onChange={onChange}
+        onChange={changeSubmit}
       />
     </div>
   );
-};
-Filter.propTypes = {
-  filter: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
-};
-export default Filter;
+}

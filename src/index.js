@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import './index.css';
+import { PhoneBookProvider } from './hooks/PhoneBookContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <PhoneBookProvider>
+      <App />
+    </PhoneBookProvider>
   </React.StrictMode>
 );

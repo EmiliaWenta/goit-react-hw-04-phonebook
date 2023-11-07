@@ -1,10 +1,11 @@
 import React from 'react';
 import css from './Form.module.css';
-import PropTypes from 'prop-types';
+import { usePhoneBook } from 'hooks/PhoneBookContext';
 
-const Form = ({ onSubmit }) => {
+export default function Form() {
+  const { handleSubmit } = usePhoneBook();
   return (
-    <form className={css.form} onSubmit={onSubmit}>
+    <form className={css.form} onSubmit={handleSubmit}>
       <label className={css.form__label}>
         Name
         <input
@@ -32,8 +33,4 @@ const Form = ({ onSubmit }) => {
       </button>
     </form>
   );
-};
-Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
-export default Form;
+}
